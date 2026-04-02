@@ -41,6 +41,21 @@ Navigate to the new Solana Web3 menu in your sidebar to configure the access rul
 
 Use the [slcl_login] shortcode on any page, post, or widget to display the connect button.
 
+== Third-Party or External Services ==
+
+To provide secure and seamless Web3 authentication without bloating your server, this plugin relies on the following external services:
+
+= 1. UNPKG CDN (unpkg.com) =
+* **What it is used for:** The plugin enqueues the official `@solana/web3.js` library directly from the UNPKG Content Delivery Network. This ensures the library is delivered securely, transparently, and incredibly fast, complying with WordPress directory guidelines against bundling minified, unreadable code.
+* **What data is sent and when:** When a visitor loads a page containing the login button or protected content, their browser sends a standard HTTP request to UNPKG to download the JavaScript file. Standard connection data (such as the user's IP address and browser user agent) is visible to the CDN during this request. No personal data from your WordPress site is sent to them.
+* **Terms & Privacy:** UNPKG is an open-source public CDN sponsored by Cloudflare. 
+[Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/)
+
+= 2. Phantom Wallet (Phantom.app) =
+* **What it is used for:** The plugin interacts with the user's Phantom browser extension to securely authenticate them via the Solana blockchain.
+* **What data is sent and when:** When a user clicks "Connect Phantom", the plugin simply requests the user's Solana Public Key (wallet address). No private keys, balances, or personal identifiable information (PII) are ever accessed or transmitted. The public key and a cryptographic signature are then sent securely to your own WordPress server for validation.
+* **Terms & Privacy:** [Phantom Privacy Policy](https://phantom.app/privacy) | [Phantom Terms of Service](https://phantom.app/terms)
+
 == Frequently Asked Questions ==
 
 = Do I need an SSL certificate? =
