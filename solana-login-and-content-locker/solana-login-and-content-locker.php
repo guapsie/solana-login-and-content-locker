@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Solana Login and Content Locker
- * Plugin URI:        https://guapsie.dev/solana-locker
+ * Plugin URI:        https://guapsie.dev/solana-login-and-content-locker
  * Description:       Web3 authentication gateway using Solana wallets. Say goodbye to passwords.
  * Version:           1.0.0
  * Author:            guapsie
